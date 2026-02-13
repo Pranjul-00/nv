@@ -1,3 +1,5 @@
+require("config.options")
+
 -- Set the leader key to Space
 -- This MUST be defined before loading plugins
 vim.g.mapleader = " "
