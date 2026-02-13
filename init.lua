@@ -1,3 +1,4 @@
+require("config.lazy")
 -- Basic Settings
 vim.opt.number = true          -- Show line numbers
 vim.opt.relativenumber = true  -- Relative numbers help with jumping lines
