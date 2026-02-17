@@ -21,9 +21,17 @@ return {
       vim.lsp.set_log_level("off") 
 
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.clangd.setup({})  -- For your C++ DSA work
-      lspconfig.pyright.setup({}) -- For your Python/ML projects
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities
+      })
+      lspconfig.clangd.setup({
+        capabilities = capabilities
+      })
+      lspconfig.pyright.setup({
+        capabilities = capabilities
+      })
 
       -- Keybindings: Press 'K' to see documentation (hover)
       -- Press 'gd' to Go to Definition
