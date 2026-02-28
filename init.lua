@@ -26,3 +26,19 @@ vim.api.nvim_create_autocmd("BufWritePost", {
         vim.fn.jobstart({"/home/drogon/.config/nvim/git-sync.sh"}, {detach = true})
     end,
 })
+
+-- WSL Clipboard support
+if vim.fn.has('wsl') == 1 then
+    vim.g.clipboard = {
+        name = 'WslClipboard',
+        copy = {
+            ['+'] = 'clip.exe',
+            ['*'] = 'clip.exe',
+        },
+        paste = {
+            ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))',
+            ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))',
+        },
+        cache_enabled = 0,
+    }
+end

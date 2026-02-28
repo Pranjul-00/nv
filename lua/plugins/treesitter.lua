@@ -6,7 +6,7 @@ return {
       local status, ts = pcall(require, "nvim-treesitter.configs")
       if not status then return end
       ts.setup({
-        ensure_installed = { "lua", "cpp", "python", "javascript" },
+        ensure_installed = { "lua", "cpp", "python", "javascript", "rust", "circom" },
         highlight = { enable = true },
       })
     end,
