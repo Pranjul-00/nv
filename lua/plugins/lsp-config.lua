@@ -11,8 +11,8 @@ return {
     config = function()
       require("mason-tool-installer").setup({
         ensure_installed = {
-          "lua_ls", "clangd", "pyright", -- LSPs
-          "stylua", "black", "isort", "clang-format", -- Formatters
+          "lua_ls", "clangd", "pyright", "jdtls", -- LSPs
+          "stylua", "black", "isort", "clang-format", "google-java-format", -- Formatters
         },
       })
     end,
@@ -34,6 +34,7 @@ return {
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.clangd.setup({ capabilities = capabilities })
       lspconfig.pyright.setup({ capabilities = capabilities })
+      lspconfig.jdtls.setup({ capabilities = capabilities })
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

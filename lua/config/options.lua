@@ -8,3 +8,10 @@ vim.opt.mouse = "a"             -- Enable mouse support
 
 -- Enable system clipboard
 vim.opt.clipboard = "unnamedplus"
+
+-- Filetype detection for Circom
+vim.filetype.add({
+  extension = {
+    circom = "circom",
+  },
+})
