@@ -8,7 +8,6 @@ return {
       python = { "isort", "black" },
       cpp = { "clang-format" },
       c = { "clang-format" },
-      java = { "google-java-format" },
     },
     format_on_save = {
       timeout_ms = 500,

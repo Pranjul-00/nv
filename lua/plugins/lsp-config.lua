@@ -12,7 +12,7 @@ return {
       require("mason-tool-installer").setup({
         ensure_installed = {
           "lua_ls", "clangd", "pyright", "jdtls", -- LSPs
-          "stylua", "black", "isort", "clang-format", "google-java-format", -- Formatters
+          "stylua", "black", "isort", "clang-format", -- Formatters
         },
       })
     end,
