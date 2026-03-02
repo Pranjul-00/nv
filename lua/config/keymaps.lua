@@ -7,3 +7,9 @@ vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Shift block left" })
 -- Optional: Also in normal mode (consistent with VS Code)
 vim.keymap.set("n", "<Tab>", ">>", { desc = "Indent line" })
 vim.keymap.set("n", "<S-Tab>", "<<", { desc = "Outdent line" })
+
+-- Toggle Wrap (VS Code Alt + Z behavior)
+vim.keymap.set({ "n", "i", "v" }, "<A-z>", function()
+  vim.wo.wrap = not vim.wo.wrap
+  print("Wrap: " .. (vim.wo.wrap and "On" or "Off"))
+end, { desc = "Toggle line wrap" })
