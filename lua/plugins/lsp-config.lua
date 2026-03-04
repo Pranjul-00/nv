@@ -30,15 +30,16 @@ return {
 
       -- Configure diagnostics (the error/warning messages)
       vim.diagnostic.config({
-        virtual_text = { prefix = '●' }, -- Show message next to code
+        virtual_text = false, -- Disable the persistent red text on the line
         underline = true,
         update_in_insert = false,
         severity_sort = true,
         float = {
           border = 'rounded',
-          source = 'always', -- Show which LSP (pyright, etc.) it's from
+          source = 'always',
           header = '',
           prefix = '',
+          focusable = false,
         },
       })
 
