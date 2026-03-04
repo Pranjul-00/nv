@@ -11,6 +11,10 @@ vim.opt.smoothscroll = true     -- Enable smooth scrolling (Neovim 0.10+)
 -- Enable system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Enable conceal for beautiful math/markdown
+vim.opt.conceallevel = 2         -- Hide markup (like ^) and show replacement symbols
+vim.opt.concealcursor = "nc"     -- Allow concealment in normal and command modes
+
 -- Filetype detection for Circom
 vim.filetype.add({
   extension = {
