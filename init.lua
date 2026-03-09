@@ -13,7 +13,7 @@ vim.g.maplocalleader = " "
 require("config.options")
 require("config.keymaps")
 require("config.lazy")
-require("config.conceal").setup()
+-- require("config.conceal").setup()
 
 -- 3. Custom Keymaps
 vim.keymap.set({ 'n', 'i', 'v' }, '<M-e>', '<End>', { desc = 'Go to end of line' })
